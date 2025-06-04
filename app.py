@@ -101,6 +101,12 @@ def serialize_user(user):
     }
 
 # Routes
+
+@app.route("/",methods=["GET"])
+def home():
+    return "<h1>My Name is Shehan </h1>"
+
+
 @app.route("/send-otp", methods=["POST"])
 def send_otp():
     email = request.json.get("email")
